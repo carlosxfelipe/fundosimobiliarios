@@ -2,9 +2,9 @@ print('-=-' * 20)
 print('Calculando Yield on Cost (YOC) de FIIs')
 print('-=-' * 20)
 
-cmaquisicao = float(input('Qual seu custo médio de aquisição? '))
+cmaquisicao = float(input('Qual seu custo médio de aquisição? ').replace(',', '.'))
 cmaquisicao * 100
-rendimento = float(input('Quanto rendeu no último mês? '))
+rendimento = float(input('Quanto rendeu no último mês? ').replace(',', '.'))
 rendimento * 12
 yocost = rendimento / cmaquisicao * 100
 
