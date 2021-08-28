@@ -25,9 +25,9 @@
         }
 
         function resultado() {
-            let cmaquisicao = document.getElementById('cmaquisicao').value
+            let cmaquisicao = (document.getElementById('cmaquisicao').value).replace(/,/g, '.')
             cmaquisicao * 100
-            let rendimento = document.getElementById('rendimento').value
+            let rendimento = (document.getElementById('rendimento').value).replace(/,/g, '.')
             rendimento * 12
             let yocost = rendimento / cmaquisicao * 100
 
