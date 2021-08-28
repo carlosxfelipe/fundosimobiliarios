@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundos Imobiliários</title>
+</head>
+<body>
+    <h1>Calculando Yield on Cost (YOC) de FIIs</h1>
+    <label for="fname">Qual seu custo médio de aquisição?</label>
+    <input type="text" id="cmaquisicao" name="fname"><br><br>
+    <label for="fname">Quanto rendeu no último mês?</label>
+    <input type="text" id="rendimento" name="fname"><br><br>
+    <button onclick="resultado()">Realizar os cálculos</button>
+    <p>Lembre-se de que FII é renda variável e, portanto, a renda varia.</p>
+    <section id="res">
+        <p>O resultado vem aqui...</p>
+    </section>
+    <section id="res2">
+
+    </section>
+    <script>
+        function calcularYOC() {
+
+        }
+
+        function resultado() {
+            let cmaquisicao = document.getElementById('cmaquisicao').value
+            cmaquisicao * 100
+            let rendimento = document.getElementById('rendimento').value
+            rendimento * 12
+            let yocost = rendimento / cmaquisicao * 100
+
+            let res = document.querySelector('section#res')
+            let res2 = document.querySelector('section#res2')
+
+            res.innerHTML = `<p>Seu yield on cost foi de ${yocost.toFixed(3)}% nesse mês.</p>`
+            res2.innerHTML = `<p>A rentabilidade anualizada seria ${(yocost * 12).toFixed(3)}%.</p>`
+        }
+    </script>
+    <footer><code>desenvolvido por carlos felipe araújo @carlosxfelipe</code></footer>
+</body>
+</html>
