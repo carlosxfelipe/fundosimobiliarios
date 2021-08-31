@@ -33,7 +33,7 @@ print('Realizando lucro/prejuízo com a venda de FIIs')
 print('-=-' * 20)
 
 precoMedio = float(input('Qual seu Preço Médio do FII? ').replace(',', '.'))
-quantidadeDeCotas = int(input('Quantas cotas você tem? '))
+quantidadeDeCotas = int(input('Quantas cotas você vendeu? '))
 valorDeVenda = float(input('Qual valor da cota no momento da venda? ').replace(',', '.'))
 imposto = (valorDeVenda - precoMedio) * 0.2
 darf = imposto * quantidadeDeCotas 
