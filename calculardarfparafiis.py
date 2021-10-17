@@ -42,9 +42,9 @@ prejuizo = ((valorDeVenda - precoMedio) * quantidadeDeCotas)
 
 if lucro > 0:
     if darf >= 10:
-        print('Seu lucro líquido na operação foi de R${:.2f} e você precisará emitir uma DARF no valor de R${:.2f} até o último dia útil de {}.'.format(lucro, darf, pegar_mes(proximoMes)))
+        print('Seu lucro líquido na operação foi de R${:.2f} e você precisará emitir um DARF no valor de R${:.2f} até o último dia útil de {}.'.format(lucro, darf, pegar_mes(proximoMes)))
     else:
-        print('Seu lucro líquido na operação foi de R${:.2f} e você por enquanto não precisa emitir uma DARF no valor de R${:.2f}, mas precisa contabilizar esse valor com outras vendas futuras.'.format(lucro, darf))
+        print('Seu lucro líquido na operação foi de R${:.2f} e você por enquanto não precisa emitir um DARF no valor de R${:.2f}, mas precisa contabilizar esse valor com outras vendas futuras.'.format(lucro, darf))
 else:
     print('Seu prejuízo na operação foi de R${:.2f} e você poderá contabilizar esse prejuízo com outras vendas futuras para compensação.'.format(abs(prejuizo)))
 
