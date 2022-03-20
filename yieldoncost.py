@@ -2,14 +2,11 @@ print('-=-' * 20)
 print('Calculando Yield on Cost (YOC) de FIIs')
 print('-=-' * 20)
 
-cmaquisicao = float(input('Qual seu custo médio de aquisição? ').replace(',', '.'))
-cmaquisicao * 100
+preco_aquisicao = float(input('Qual seu custo médio de aquisição? ').replace(',', '.'))
+preco_aquisicao * 100
 rendimento = float(input('Quanto rendeu no último mês? ').replace(',', '.'))
 rendimento * 12
-yocost = rendimento / cmaquisicao * 100
+yield_on_cost = rendimento / preco_aquisicao * 100
 
-print('Seu yield on cost foi de {:.3f}% nesse mês.'.format(yocost))
-print('A rentabilidade anualizada seria {:.3f}%.'.format(yocost * 12))
-print('Lembre-se de que FII é renda variável e, portanto, a renda varia.')
-
-# desenvolvido por carlos felipe araújo @carlosxfelipe
+print('Seu yield on cost foi de {:.3f}% nesse mês.'.format(yield_on_cost))
+print('A rentabilidade anualizada seria {:.3f}%.'.format(yield_on_cost * 12))

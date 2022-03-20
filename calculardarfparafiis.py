@@ -1,6 +1,6 @@
 from datetime import datetime
 
-proximoMes = (datetime.now().month + 1)
+proximo_mes = (datetime.now().month + 1)
 
 def pegar_mes(mes):
     if mes == 1:
@@ -32,20 +32,19 @@ print('-=-' * 20)
 print('Realizando lucro/prejuízo com a venda de FIIs')
 print('-=-' * 20)
 
-precoMedio = float(input('Qual seu Preço Médio do FII? ').replace(',', '.'))
-quantidadeDeCotas = int(input('Quantas cotas você vendeu? '))
-valorDeVenda = float(input('Qual valor da cota no momento da venda? ').replace(',', '.'))
-imposto = (valorDeVenda - precoMedio) * 0.2
-darf = imposto * quantidadeDeCotas 
-lucro = ((valorDeVenda - precoMedio) * quantidadeDeCotas) - darf
-prejuizo = ((valorDeVenda - precoMedio) * quantidadeDeCotas)
+preco_medio = float(input('Qual seu Preço Médio do FII? ').replace(',', '.'))
+quantidade_de_cotas = int(input('Quantas cotas você vendeu? '))
+valor_de_venda = float(input('Qual valor da cota no momento da venda? ').replace(',', '.'))
+imposto = (valor_de_venda - preco_medio) * 0.2
+darf = imposto * quantidade_de_cotas 
+lucro = ((valor_de_venda - preco_medio) * quantidade_de_cotas) - darf
+prejuizo = ((valor_de_venda - preco_medio) * quantidade_de_cotas)
 
 if lucro > 0:
     if darf >= 10:
-        print('Seu lucro líquido na operação foi de R${:.2f} e você precisará emitir um DARF no valor de R${:.2f} até o último dia útil de {}.'.format(lucro, darf, pegar_mes(proximoMes)))
+        print('Seu lucro líquido na operação foi de R${:.2f} e você precisará emitir um DARF no valor de R${:.2f} até o último dia útil de {}.'.format(lucro, darf, pegar_mes(proximo_mes)))
     else:
         print('Seu lucro líquido na operação foi de R${:.2f} e você por enquanto não precisa emitir um DARF no valor de R${:.2f}, mas precisa contabilizar esse valor com outras vendas futuras.'.format(lucro, darf))
 else:
     print('Seu prejuízo na operação foi de R${:.2f} e você poderá contabilizar esse prejuízo com outras vendas futuras para compensação.'.format(abs(prejuizo)))
 
-# desenvolvido por carlos felipe araújo @carlosxfelipe

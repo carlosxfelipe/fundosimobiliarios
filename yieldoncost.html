@@ -6,44 +6,54 @@
     <title>Fundos Imobiliários</title>
   </head>
   <body>
-    <h1>Calculando Yield on Cost (YOC) de FIIs</h1>
-    <label for="fname">Qual seu custo médio de aquisição?</label>
-    <input type="text" id="cmaquisicao" name="fname" /><br /><br />
-    <label for="fname">Quanto rendeu no último mês?</label>
-    <input type="text" id="rendimento" name="fname" /><br /><br />
-    <button onclick="resultado()">Realizar os cálculos</button>
-    <p>Lembre-se de que FII é renda variável e, portanto, a renda varia.</p>
-    <section id="res">
-      <p>O resultado vem aqui...</p>
-    </section>
-    <section id="res2"></section>
-    <script>
-      function calcularYOC() {}
+    <div>
+      <h1>Cálculo do Yield on Cost (YOC)</h1>
+      <p>
+        <label>Qual seu custo médio de aquisição?</label>
+      </p>
+      <p>
+        <input type="text" id="precoAquisicao" />
+      </p>
+      <p>
+        <label>Quanto rendeu no último mês?</label>
+      </p>
+      <p>
+        <input type="text" id="rendimento" />
+      </p>
+      <button onclick="resultado()">Realizar os cálculos</button>
+      <section id="resultadoMes">
+        <p>Seu yield on cost foi de ... nesse mês.</p>
+      </section>
+      <section id="resultadoAno">
+        <p>A rentabilidade anualizada seria de ...</p>
+      </section>
+    </div>
 
-      function resultado() {
-        let cmaquisicao = document
-          .getElementById("cmaquisicao")
+    <script>
+      const calcularYOC = () => {};
+
+      const resultado = () => {
+        let precoAquisicao = document
+          .getElementById("precoAquisicao")
           .value.replace(/,/g, ".");
-        cmaquisicao * 100;
+        precoAquisicao * 100;
         let rendimento = document
           .getElementById("rendimento")
           .value.replace(/,/g, ".");
         rendimento * 12;
-        let yocost = (rendimento / cmaquisicao) * 100;
 
-        let res = document.querySelector("section#res");
-        let res2 = document.querySelector("section#res2");
+        let yieldOnCost = (rendimento / precoAquisicao) * 100;
 
-        res.innerHTML = `<p>Seu yield on cost foi de ${yocost.toFixed(
+        let resultadoMes = document.querySelector("section#resultadoMes");
+        let resultadoAno = document.querySelector("section#resultadoAno");
+
+        resultadoMes.innerHTML = `<p>Seu yield on cost foi de ${yieldOnCost.toFixed(
           3
         )}% nesse mês.</p>`;
-        res2.innerHTML = `<p>A rentabilidade anualizada seria ${(
-          yocost * 12
+        resultadoAno.innerHTML = `<p>A rentabilidade anualizada seria de ${(
+          yieldOnCost * 12
         ).toFixed(3)}%.</p>`;
-      }
+      };
     </script>
-    <footer>
-      <code>desenvolvido por carlos felipe araújo @carlosxfelipe</code>
-    </footer>
   </body>
 </html>
