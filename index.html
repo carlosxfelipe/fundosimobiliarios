@@ -6,7 +6,7 @@
     <title>Fundos Imobiliários</title>
   </head>
   <body>
-    <div>
+    <div class="calculardarfparafiis">
       <h1>Cálculo da venda de FIIs</h1>
       <p>
         <label>Qual seu Preço Médio do FII?</label>
@@ -26,12 +26,36 @@
       <p>
         <input type="text" id="valorDeVenda" />
       </p>
-      <button onclick="resultado()">Realizar os cálculos</button>
+      <button onclick="calcularDarf()">Realizar os cálculos</button>
       <section id="resultadoVenda">
         <p>Seu lucro líquido na operação foi de ...</p>
       </section>
     </div>
 
+    <div class="yieldoncost">
+      <h1>Cálculo do Yield on Cost (YOC)</h1>
+      <p>
+        <label>Qual seu custo médio de aquisição?</label>
+      </p>
+      <p>
+        <input type="text" id="precoAquisicao" />
+      </p>
+      <p>
+        <label>Quanto rendeu no último mês?</label>
+      </p>
+      <p>
+        <input type="text" id="rendimento" />
+      </p>
+      <button onclick="calcularYieldOnCost()">Realizar os cálculos</button>
+      <section id="resultadoMes">
+        <p>Seu yield on cost foi de ... nesse mês.</p>
+      </section>
+      <section id="resultadoAno">
+        <p>A rentabilidade anualizada seria de ...</p>
+      </section>
+    </div>
+
     <script src="assets/js/calculardarfparafiis.js"></script>
+    <script src="assets/js/yieldoncost.js"></script>
   </body>
 </html>
