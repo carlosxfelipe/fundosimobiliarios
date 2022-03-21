@@ -1,4 +1,4 @@
-function calcularDarf() {
+function resultado() {
   let precoMedio = document
     .getElementById("precoMedio")
     .value.replace(/,/g, ".");

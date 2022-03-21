@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fundos Imobiliários</title>
+  </head>
+  <body>
+    <div>
+      <h1>Cálculo da venda de FIIs</h1>
+      <p>
+        <label>Qual seu Preço Médio do FII?</label>
+      </p>
+      <p>
+        <input type="text" id="precoMedio" />
+      </p>
+      <p>
+        <label>Quantas cotas você vendeu?</label>
+      </p>
+      <p>
+        <input type="text" id="quantidadeDeCotas" />
+      </p>
+      <p>
+        <label>Qual valor da cota no momento da venda?</label>
+      </p>
+      <p>
+        <input type="text" id="valorDeVenda" />
+      </p>
+      <button onclick="resultado()">Realizar os cálculos</button>
+      <section id="resultadoVenda">
+        <p>Seu lucro líquido na operação foi de ...</p>
+      </section>
+    </div>
+
+    <script src="calculardarfparafiis.js"></script>
+  </body>
+</html>

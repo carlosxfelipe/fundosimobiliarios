@@ -1,4 +1,4 @@
-const calcularYieldOnCost = () => {
+const resultado = () => {
   let precoAquisicao = document
     .getElementById("precoAquisicao")
     .value.replace(/,/g, ".");
